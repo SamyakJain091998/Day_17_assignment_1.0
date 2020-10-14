@@ -5,41 +5,33 @@ import com.opencsv.bean.*;
 
 public class CSVUser {
 	@CsvBindByName
-	private String name;
-
-	@CsvBindByName(column = "email", required = true)
-	private String email;
-
-	@CsvBindByName(column = "phone")
-	private String phoneNo;
+	private String firstName;
 
 	@CsvBindByName
-	private String country;
+	private String lastName;
+
+	@CsvBindByName
+	private String address;
+
+	@CsvBindByName
+	private String city;
+
+	@CsvBindByName
+	private String state;
+
+	@CsvBindByName
+	private long zip;
+
+	@CsvBindByName
+	private long phoneNumber;
+
+	@CsvBindByName()
+	private String email;
 
 	@Override
 	public String toString() {
-		return "CSVUser{" + "name=" + name + "\n email=" + email + "\n phoneNo=" + phoneNo + "\n country=" + country
-				+ "\n }";
+		return "CSVUser{" + "firstName=" + firstName + "lastName=" + lastName + "address=" + address + "city=" + city
+				+ "state=" + state + "\n zip=" + zip + "\n phoneNumber=" + phoneNumber + "\n email=" + email + "\n }";
 	}
 
-	public String getName() {
-		// TODO Auto-generated method stub
-		return name;
-	}
-
-	public String getEmail() {
-		// TODO Auto-generated method stub
-		return email;
-	}
-
-	public String getPhoneNo() {
-		// TODO Auto-generated method stub
-		return phoneNo;
-	}
-
-	public String getCountry() {
-		// TODO Auto-generated method stub
-		return country;
-	}
 }
-
